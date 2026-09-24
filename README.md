@@ -10,12 +10,18 @@ Umar Satybaldiev COMCIF-24
 
 Almanbet Zhanyshev COMCIF-24
 
-Choro Ukushov COMCIF-24
+Choro Ukushov COMCIF-24 - teamlead
 
 
 ## Стек технологий
-Здесь будут технологии...
+Docker
+Kubernetes
+Linux
+ansible
 
 
 ## Инструкции по запуску
-Здесь будут шаги для запуска...
+1. Worship the electricity deities
+2. Pray with hopes that the thing will boot up successfully
+3. ???
+4. Good job!

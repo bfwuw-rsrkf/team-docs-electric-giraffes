@@ -10,7 +10,7 @@ Umar Satybaldiev COMCIF-24 - devops-engineer
 
 Almanbet Zhanyshev COMCIF-24
 
-Choro Ukushov COMCIF-24
+Choro Ukushov COMCIF-24 - teamlead
 
 
 ## Стек технологий

@@ -1,1 +1,19 @@
-# team-docs-electric-giraffes
+# Наш DevOps проект
+
+
+## Описание проекта
+Здесь будет общее описание...
+
+
+## Команда
+Umar Satybaldiev COMCIF-24
+Almanbet Zhanyshev COMCIF-24
+Choro Ukushov COMCIF-24
+
+
+## Стек технологий
+Здесь будут технологии...
+
+
+## Инструкции по запуску
+Здесь будут шаги для запуска...

@@ -1,0 +1,29 @@
+groups:
+  - name: infra-demo-alerts
+    rules:
+      - alert: HighErrorRate
+        expr: rate(http_requests_total{status=~"5.."}[5m]) > 0.05
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Высокий процент ошибок 5xx"
+          description: "Более 5% запросов возвращают ошибку за последние 5 минут."
+
+      - alert: PodMemoryHigh
+        expr: container_memory_usage_bytes{pod=~"infra-demo.*"} > 200000000
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Высокое потребление памяти подом"
+          description: "Под {{ $labels.pod }} использует более 200MB памяти дольше 10 минут."
+
+      - alert: InstanceDown
+        expr: up{job="infra-demo-app"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Инстанс приложения недоступен"
+          description: "Prometheus не может достучаться до {{ $labels.instance }} более 2 минут."

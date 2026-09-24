@@ -15,10 +15,15 @@ Choro Ukushov COMCIF-24 - teamlead
 
 ## Стек технологий
 Git
+
 Linux
+
 Terraform
+
 Kubernetes
+
 Docker
+
 Ansible
 
 

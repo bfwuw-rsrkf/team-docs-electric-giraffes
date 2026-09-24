@@ -1,0 +1,47 @@
+---
+- name: Настройка сервера приложения
+  hosts: app_servers
+  become: true
+
+  vars:
+    app_dir: /opt/app
+    app_user: appuser
+
+  tasks:
+    - name: Обновить кэш пакетов
+      apt:
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Установить базовые зависимости
+      apt:
+        name:
+          - curl
+          - git
+          - docker.io
+        state: present
+
+    - name: Создать пользователя приложения
+      user:
+        name: "{{ app_user }}"
+        shell: /bin/bash
+        create_home: true
+
+    - name: Создать директорию приложения
+      file:
+        path: "{{ app_dir }}"
+        state: directory
+        owner: "{{ app_user }}"
+        mode: "0755"
+
+    - name: Запустить и включить docker
+      systemd:
+        name: docker
+        state: started
+        enabled: true
+
+    - name: Добавить пользователя в группу docker
+      user:
+        name: "{{ app_user }}"
+        groups: docker
+        append: true

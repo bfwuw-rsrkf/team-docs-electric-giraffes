@@ -7,7 +7,9 @@
 
 ## Команда
 Umar Satybaldiev COMCIF-24
+
 Almanbet Zhanyshev COMCIF-24
+
 Choro Ukushov COMCIF-24
 
 
